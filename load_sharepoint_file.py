@@ -20,7 +20,7 @@ def get_token():
     tenant_id = "XXXX"
     client_id = "XXXX" 
 
-    client_secret = keyring.get_password("DBSPython.Service", client_id) #gets password for stored username. The arguments here are essential for retrieving the password and it can only be obtained by logging in as this user
+    client_secret = keyring.get_password("Account_Name", client_id) #gets password for stored username. The arguments here are essential for retrieving the password and it can only be obtained by logging in as this user
     if not client_secret:
         logger.error("No client_secret found in Windows Credential Manager for SharePoint")
         raise RuntimeError("Missing SharePoint password")    
